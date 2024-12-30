@@ -126,13 +126,14 @@ export default function SubmitPage() {
               <div></div>
             </div>
           </div>
-          <div className="input-container bg-slate-100 p-2  rounded-md ">
+          <div className="input-container flex items-center bg-slate-100 p-2  rounded-md  ">
             <div style={{ width: "50%" }} className="p-1">
-              <label className="hi" htmlFor="AiAgentName">
-                AI Agent Name <span className="star">*</span>
-              </label>
-              <div className="wordCount">{formData?.name?.length}/35</div>
-
+              <div className="flex py-2 ">
+                <label className="hi" htmlFor="AiAgentName">
+                  AI Agent Name <span className="star ml-2">*</span>
+                </label>
+                <div className="wordCount">{formData?.name?.length}/35</div>
+              </div>
               <input
                 className="form-control container mb-2 shadow-md hover:shadow-lg text-lg"
                 type="text"
@@ -145,11 +146,14 @@ export default function SubmitPage() {
             </div>
 
             <div style={{ width: "50%" }}>
-              <label className="hi" htmlFor="CreatedBy">
-                Created By <span className="star">*</span>
-              </label>
-              <div className="wordCount">{formData?.created_by?.length}/50</div>
-
+              <div className="flex py-2 ">
+                <label className="hi " htmlFor="CreatedBy">
+                  Created By <span className="star ml-2">*</span>
+                </label>
+                <div className="wordCount">
+                  {formData?.created_by?.length}/50
+                </div>
+              </div>
               <input
                 className="form-control container mb-2 shadow-md hover:shadow-lg text-lg"
                 type="text"
@@ -161,19 +165,19 @@ export default function SubmitPage() {
               />
             </div>
           </div>
-          <div className="input-container bg-slate-100 p-2  rounded-md ">
+          <div className="input-container flex items-center  bg-slate-100 p-3  rounded-md ">
             <div style={{ width: "50%" }}>
-              <label className="hi" for="Ai Agent">
-                Website URL <span className="star">*</span>
-              </label>
-              <div className="wordCount">
-                {formData?.website_url?.length}/100
+              <div className="flex py-2 ">
+                <label className="hi" for="Ai Agent">
+                  Website URL <span className="star ml-2">*</span>
+                </label>
+                <div className="wordCount">
+                  {formData?.website_url?.length}/100
+                </div>
               </div>
-
               <input
                 className="form-control container mb-2 shadow-md hover:shadow-lg text-lg"
                 type="text"
-                class="form-control"
                 name="website_url"
                 onChange={handleChange}
                 required // This makes the field mandatory
@@ -181,18 +185,19 @@ export default function SubmitPage() {
                 placeholder="Enter Website URL or github Url"
               />
             </div>
+
             <div style={{ width: "50%" }}>
-              <label className="hi" for="Ai Agent">
+              <div className="flex py-2 ">
+              <label className="hi " for="Ai Agent">
                 Contact Email
               </label>
-              <div className="wordCount">{formData?.email?.length}/50</div>
-
+              <div className="wordCount ml-2">{formData?.email?.length}/50</div>
+              </div>
               <input
                 className="form-control container mb-2 shadow-md hover:shadow-lg text-lg"
                 type="email"
                 onChange={handleChange}
                 name="email"
-                class="form-control"
                 id="floatingInputGrid"
                 placeholder="Enter Email"
               />
@@ -203,7 +208,7 @@ export default function SubmitPage() {
           <div className="input-container bg-slate-100 p-2  flex justify-center items-center rounded-md ">
             <div>
               <label className="hi" htmlFor="accessModel">
-                Access Model <span className="star">*</span>
+                Access Model <span className="star ml-2">*</span>
               </label>
               <div className="flex items-center gap-2 mb-2">
                 <input
@@ -252,7 +257,7 @@ export default function SubmitPage() {
             <br />
             <div>
               <label className="hi" htmlFor="pricingModel">
-                Pricing Model <span className="star">*</span>
+                Pricing Model <span className="star ml-2">*</span>
               </label>
               <div className="flex items-center gap-2 mb-2">
                 <input
@@ -302,7 +307,7 @@ export default function SubmitPage() {
           <div className="input-container bg-slate-100 p-2  flex justify-center items-center rounded-md ">
             <div>
               <label className="hi" htmlFor="category">
-                Category <span className="star">*</span>
+                Category <span className="star ml-2">*</span>
               </label>
               <div className="flex items-center gap-2 mb-2">
                 <input
@@ -511,7 +516,7 @@ export default function SubmitPage() {
           <div className="input-container bg-slate-100 p-2  flex justify-center items-center rounded-md ">
             <div>
               <label className="hi" htmlFor="industry">
-                Industry <span className="star">*</span>
+                Industry <span className="star ml-2">*</span>
               </label>
               <div className="flex items-center gap-2 mb-2">
                 <input
@@ -695,7 +700,7 @@ export default function SubmitPage() {
         <div className="tagline my-4">
           <p className="align-center p-0 m-0">
             <label className="hi">
-              Tagline <span className="star">*</span>
+              Tagline <span className="star ml-2">*</span>
             </label>
             <div className="wordCount1">{formData?.tagline?.length}/50</div>
           </p>
@@ -713,7 +718,7 @@ export default function SubmitPage() {
         <div className="my-4">
           <div className="align-center ">
             <label className="hi">
-              Description <span className="star">*</span>
+              Description <span className="star ml-2">*</span>
             </label>
             <div className="wordCount1">
               {formData?.description?.length}/750
