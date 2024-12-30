@@ -1,0 +1,147 @@
+.total-container {
+  background-color: #f9f9f9; /* Light gray background for contrast */
+  border-radius: 15px;
+  padding: 40px;
+}
+
+.detail-container {
+  width: 60%;
+  margin: 0 auto;
+  padding: 25px;
+  box-sizing: border-box;
+  background-color: white; /* Solid white background */
+  color: #333; /* Dark gray for text */
+  border: 1px solid #ddd; /* Light gray border */
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+}
+
+.back-button {
+  background-color: blue; /* Dark button background */
+  color: white; /* White text for contrast */
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.detail-header {
+  display: flex;
+  padding: 20px;
+  justify-content: center  !important;
+  /* background-color: lightgrey; */
+  color: black;
+  border-radius: 10px;
+  text-transform: capitalize;
+  align-items: center;
+}
+
+.agent-logo {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.header-content h1 {
+  margin: 0;
+  font-size: 32px;
+  color: black;
+}
+
+.agent-tagline {
+  color: black; /* Light gray for subtlety */
+  margin: 10px 0;
+  font-style: italic;
+}
+
+.tags {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.tag {
+  padding: 5px 10px;
+  background-color: #555; /* Dark gray for tags */
+  border-radius: 5px;
+  font-size: 14px;
+  color: white;
+}
+
+.visit-website-button a {
+  text-decoration: none;
+  color: #333;
+  background-color: #f9f9f9;
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.detail-section {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: white;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05); /* Lighter shadow for inner sections */
+}
+
+.section-border {
+  margin-top: 20px;
+}
+
+.detail-section h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 2px solid #ddd; /* Subtle underline */
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+.star-list li::before {
+  content: "★";
+  color: #555; /* Subtle dark gray */
+  padding-left: 0px !important;
+}
+
+.tick-list li::before {
+  content: "✓";
+  color: #555; /* Subtle dark gray */
+}
+
+.agent-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-top: 20px;
+  color: #444;
+}
+
+.agent-details p {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.icon {
+  margin-right: 8px;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .detail-container {
+    width: 90%;
+  }
+  
+  .detail-header {
+    flex-direction: column;
+    align-items: center;
+  }
+}

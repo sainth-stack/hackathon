@@ -191,7 +191,7 @@ export default function AgiAgents() {
 
   return (
     <>
-      <div className="w-12/12 bg-gray-100">
+      <div className="w-12/12 bg-gray-50">
         <div
           className={`bg-slate-50 shadow-md rounded-lg  ${
             location.pathname == "/agnets-hub" ? "" : ""
@@ -199,7 +199,7 @@ export default function AgiAgents() {
         >
           {/* // <Navbar /> */}
           <div
-            className=""
+            className="bg-slate-100"
             style={{
               width: "100%",
               color: "black",
@@ -229,135 +229,124 @@ export default function AgiAgents() {
               </p>
             </div>
             <input
+              type="text"
               placeholder="Search for AI Agent here..."
-              className="input mb-5 shadow-md rounded-lg"
-              style={{
-                width: "40%",
-                maxWidth: "90%", // Ensure responsiveness on smaller screens
-                border: "1px solid #ccc",
-                borderRadius: "8px",
-                padding: "10px",
-                fontSize: "16px",
-                outline: "none",
-                boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
-                transition: "box-shadow 0.3s ease",
-                marginTop: "1rem", // Space between text and input
-              }}
+              className="w-4/5 md:w-2/5 max-w-lg mb-5 p-2 text-md border border-gray-300 rounded-lg shadow-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-shadow duration-300 ease-in-out"
               value={search}
               onChange={handleSearchChange}
-              onFocus={(e) =>
-                (e.target.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.2)")
-              }
-              onBlur={(e) =>
-                (e.target.style.boxShadow = "0 2px 4px rgba(0, 0, 0, 0.1)")
-              }
             />
           </div>
 
-          <div className="filter-container bg-slate-100 border-1 border-gray-50">
-            <div className="filter-section shadow-md outline-none rounded-lg">
-              <h3>Refine Search</h3>
-              <div className="categories">
-                <h4>Categories</h4>
+          <div className="filter-container bg-slate-100 border  rounded-lg shadow-md p-5">
+            <div className="filter-section container bg-slate-50  rounded-md shadow-md  space-y-6 max-w-sm">
+              <h3 className="text-lg font-bold text-gray-700 border-b pb-2">
+                Refine Search
+              </h3>
+
+              <div className="categories space-y-3">
+                <h4 className="text-md font-semibold text-gray-600">
+                  Categories
+                </h4>
                 <input
                   type="text"
                   placeholder="Search categories"
-                  className="filter-search input  shadow-md rounded-lg p-2 ml-1 "
+                  className="filter-search w-full border border-gray-300 rounded-lg p-2 shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
                   value={categorySearch}
                   onChange={handleCategorySearchChange}
                 />
-                {/* <div>
-              <input type="checkBox" />
-              <label className="All">ALL</label>
-            </div> */}
 
-                <div
-                  className="checkbox-group"
-                  style={{ height: "200px", overflow: "auto" }}
-                >
+                <div className="checkbox-group overflow-y-auto h-48 border-t pt-2">
                   {filteredCategories.map((category, index) => (
-                    <label key={index} style={{ display: "flex", gap: "7px" }}>
+                    <label
+                      key={index}
+                      className="flex items-center gap-2 cursor-pointer font-semibold hover:text-gray-800"
+                    >
                       <input
-                        type="checkBox"
+                        type="checkbox"
                         checked={selectedCategories.includes(category)}
                         onChange={() => handleCategoryCheckboxChange(category)}
+                        className="accent-blue-500 font-bold"
                       />
                       {category}
-                      {/* ({Math.floor(Math.random() * 50) + 1}) */}
                     </label>
                   ))}
                 </div>
               </div>
-              <div className="industries">
-                <h4>Industries</h4>
+
+              <div className="industries space-y-3">
+                <h4 className="text-md font-semibold text-gray-600">
+                  Industries
+                </h4>
                 <input
                   type="text"
                   placeholder="Search industries"
-                  className="filter-search input shadow-md rounded-lg p-2 ml-1"
+                  className="filter-search w-full border border-gray-300 rounded-lg p-2 shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
                   value={industrySearch}
                   onChange={handleIndustrySearchChange}
                 />
-                {/* <div>
-              <input type="checkbox"/>
-              <label className="All">ALL</label>
-            </div> */}
-                <div
-                  className="checkbox-group"
-                  style={{ height: "200px", overflow: "auto" }}
-                >
+
+                <div className="checkbox-group overflow-y-auto h-48 border-t pt-2">
                   {filteredIndustries.map((industry, index) => (
-                    <label key={index} style={{ display: "flex", gap: "7px" }}>
+                    <label
+                      key={index}
+                      className="flex items-center gap-2 cursor-pointer font-semibold hover:text-gray-800"
+                    >
                       <input
-                        type="checkBox"
-                        //className="w-5"
+                        type="checkbox"
                         checked={selectedIndustries.includes(industry)}
                         onChange={() => handleIndustryCheckboxChange(industry)}
+                        className="accent-blue-500"
                       />
                       {industry}
-                      {/* ({Math.floor(Math.random() * 50) + 1}) */}
                     </label>
                   ))}
                 </div>
               </div>
             </div>
 
-            <div className="agents-section">
-              <div className="agents-header pr-3">
-                <div className="view-switch">
-                  {/* <button className="view-button active">Grid</button>
-                            <button className="view-button">List</button> */}
+            <div className="agents-section mt-6">
+              <div className="agents-header flex justify-between items-center border-b pb-2">
+                <div className="view-switch flex space-x-2">
+                  {/* Add toggle buttons for Grid/List View */}
                 </div>
-                <div className="sort-dropdown pr-4">
+
+                <div className="sort-dropdown flex items-center space-x-3">
+                  <label
+                    htmlFor="sort"
+                    className="text-sm font-medium text-gray-700"
+                  >
+                    Sort By:
+                  </label>
                   <select
-                    className="sort-select"
+                    id="sort"
+                    className="sort-select bg-gray-50 border border-gray-400 text-gray-700 rounded-lg shadow-sm p-2 focus:ring-2 focus:ring-blue-500 focus:outline-none transition"
                     value={sort}
                     onChange={handleSortChange}
                   >
                     <option value="newest">Newest</option>
                     <option value="oldest">Oldest</option>
-                    {/* <option value="popular">Popular</option> */}
                   </select>
                 </div>
               </div>
+
               {loading ? (
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}
-                >
+                <div className="flex justify-center items-center h-32">
                   <PrepLoader />
                 </div>
               ) : (
-                <div className="agents-list">
-                  {agents.map((agent) => {
-                    return <ChildCard agent={agent} navigate={navigate} />;
-                  })}
+                <div className="agents-list grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {agents.map((agent) => (
+                    <ChildCard
+                      key={agent.id}
+                      agent={agent}
+                      navigate={navigate}
+                    />
+                  ))}
                 </div>
               )}
             </div>
           </div>
+
           <Footer />
         </div>
       </div>

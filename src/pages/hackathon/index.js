@@ -93,31 +93,31 @@ const AgentHackathon = () => {
                     </div>
 
                 </div>
-                <div className="robot-image" style={{ position: 'relative', width: '500px', height: '100%' }}>
-                    <img
-                        src={circle}
-                        alt="Circle"
-                        width="550"
-                        style={{
-                            position: 'absolute',
-                            zIndex: 1,
-                            top: -10,
-                            left: 0
-                        }}
-                    />
-                    <img
-                        src={robo}
-                        alt="Robot"
-                        width="250"
-                        style={{
-                            position: 'absolute',
-                            zIndex: 2,
-                            marginTop: '80px',
-                            marginLeft: '10px',
-                            transform: 'translate(-50%, -50%)'
-                        }}
-                    />
-                </div>
+                    <div className="robot-image" style={{ position: 'relative', width: '500px', height: '100%' }}>
+                        <img
+                            src={circle}
+                            alt="Circle"
+                            width="550"
+                            style={{
+                                position: 'absolute',
+                                zIndex: 1,
+                                top: -10,
+                                left: 0
+                            }}
+                        />
+                        <img
+                            src={robo}
+                            alt="Robot"
+                            width="250"
+                            style={{
+                                position: 'absolute',
+                                zIndex: 2,
+                                marginTop: '80px',
+                                marginLeft: '13rem',
+                                transform: 'translate(-50%, -50%)'
+                            }}
+                        />
+                    </div>
 
             </div>
 
