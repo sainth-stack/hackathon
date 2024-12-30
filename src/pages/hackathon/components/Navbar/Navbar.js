@@ -13,6 +13,7 @@ const Navbar = () => {
     { text: "Home", link: "/" },
     { text: "Agi-Agents", link: "/agi-agents" },
     { text: "Hackathon", link: "/hackathon" },
+    { text: "Submit Ai Agent", link: "/agi-agents/submit" },
   ];
 
   return (
