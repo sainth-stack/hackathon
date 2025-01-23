@@ -12,7 +12,7 @@ function App() {
       <Navbar />
       <div className="App">
         <Routes>
-          <Route path="/" element={<AgentHackathon />} />
+          <Route path="/" element={<AgiAgents />} />
           <Route path="/agi-agents" element={<AgiAgents />} />
           <Route path="/agi-agents/submit" element={<SubmitPage />} />
           <Route path="/hackathon" element={<AgentHackathon />} />
